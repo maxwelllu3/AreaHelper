@@ -11,6 +11,7 @@ import UIKit
 class RectangleViewController: UIViewController {
     
     
+    @IBOutlet weak var out: UILabel!
     @IBOutlet weak var l: UITextField!
     @IBOutlet weak var w: UITextField!
     
@@ -28,17 +29,20 @@ class RectangleViewController: UIViewController {
     
     @IBAction func calculate(_ sender: Any) {
         
-        let area = areaOfRectangle(length: l?.text, width: w?.text)
+        let givenLength = l.text!
+        let givenWidth = w.text!
+        let numericLength = Double(givenLength)!
+        let numericWidth = Double(givenWidth)!
+        
+        out.text = "Area of Rectangle: \(areaOfRectangle(length: numericLength, width: numericWidth))"
     }
     
     
     
         
         
-    }
+}
     
 
-    //a
-    
 
 

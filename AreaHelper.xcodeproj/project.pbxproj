@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		30445302236282CF00520193 /* RectangleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30445301236282CF00520193 /* RectangleViewController.swift */; };
+		30A477B7236A701500659C5D /* CircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A477B6236A701500659C5D /* CircleViewController.swift */; };
 		30F5148D2357EF8200E4845A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F5148C2357EF8200E4845A /* AppDelegate.swift */; };
 		30F5148F2357EF8200E4845A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F5148E2357EF8200E4845A /* ViewController.swift */; };
 		30F514922357EF8200E4845A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30F514902357EF8200E4845A /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		30445301236282CF00520193 /* RectangleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleViewController.swift; sourceTree = "<group>"; };
+		30A477B6236A701500659C5D /* CircleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewController.swift; sourceTree = "<group>"; };
 		30F514892357EF8200E4845A /* AreaHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AreaHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30F5148C2357EF8200E4845A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30F5148E2357EF8200E4845A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				30F514952357EF8900E4845A /* LaunchScreen.storyboard */,
 				30F514982357EF8900E4845A /* Info.plist */,
 				30445301236282CF00520193 /* RectangleViewController.swift */,
+				30A477B6236A701500659C5D /* CircleViewController.swift */,
 			);
 			path = AreaHelper;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			files = (
 				30F5148F2357EF8200E4845A /* ViewController.swift in Sources */,
 				30445302236282CF00520193 /* RectangleViewController.swift in Sources */,
+				30A477B7236A701500659C5D /* CircleViewController.swift in Sources */,
 				30F5148D2357EF8200E4845A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

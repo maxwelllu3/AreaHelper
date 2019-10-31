@@ -34,6 +34,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Circle"/>
+                                <connections>
+                                    <segue destination="9Jc-nn-23F" kind="show" id="PEf-Ni-SJf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCx-ee-YNc">
                                 <rect key="frame" x="144" y="347" width="130" height="48"/>
@@ -41,7 +44,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Rectangle"/>
                                 <connections>
-                                    <segue destination="JsY-Bj-a6Z" kind="show" id="7Jv-ba-fiy"/>
+                                    <segue destination="JsY-Bj-a6Z" kind="show" id="omW-hc-BXF"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Version 1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0FJ-2J-BBw">
@@ -63,7 +66,7 @@
         <!--Rectangle-->
         <scene sceneID="kOr-2O-1bg">
             <objects>
-                <viewController title="Rectangle" id="JsY-Bj-a6Z" customClass="RectangleViewController" sceneMemberID="viewController">
+                <viewController title="Rectangle" id="JsY-Bj-a6Z" customClass="RectangleViewController" customModule="AreaHelper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GBG-ug-SFF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -111,9 +114,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="w:" destination="JsY-Bj-a6Z" eventType="editingDidEnd" id="lYJ-Nd-SA2"/>
-                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ooe-4a-mU8">
                                 <rect key="frame" x="142" y="346" width="130" height="48"/>
@@ -121,14 +121,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Calculate!"/>
                                 <connections>
-                                    <action selector="Calculate:" destination="JsY-Bj-a6Z" eventType="touchUpInside" id="MNq-MC-Aeo"/>
                                     <action selector="calculate:" destination="JsY-Bj-a6Z" eventType="touchUpInside" id="glo-Az-DPz"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Area of Rectangle:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J50-6n-BN2">
-                                <rect key="frame" x="42" y="439" width="330" height="48"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your results shown here..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZaE-XE-MNj">
+                                <rect key="frame" x="43" y="520" width="329" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -138,8 +137,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="8FB-CC-6l1"/>
                     <connections>
-                        <outlet property="area" destination="J50-6n-BN2" id="0Wk-4X-5kU"/>
                         <outlet property="l" destination="yK4-y0-Ttx" id="esy-GL-R04"/>
+                        <outlet property="out" destination="ZaE-XE-MNj" id="zV1-4N-AAa"/>
                         <outlet property="w" destination="iBG-Gw-JBj" id="EfC-0F-l6d"/>
                     </connections>
                 </viewController>
@@ -147,8 +146,79 @@
             </objects>
             <point key="canvasLocation" x="800.00000000000011" y="10.714285714285714"/>
         </scene>
+        <!--Circle View Controller-->
+        <scene sceneID="VZC-jV-otF">
+            <objects>
+                <viewController id="9Jc-nn-23F" customClass="CircleViewController" customModule="AreaHelper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lVs-xu-Jhi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Area Helper" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vy-f4-eUt">
+                                <rect key="frame" x="20" y="34" width="274" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Circle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMc-nL-zbc">
+                                <rect key="frame" x="20" y="97" width="132" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="areaOfCircle" translatesAutoresizingMaskIntoConstraints="NO" id="wSZ-Wl-chI">
+                                <rect key="frame" x="20" y="149" width="192" height="166"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the radius here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6p2-zZ-fyx">
+                                <rect key="frame" x="212" y="232" width="170" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Radius:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvx-YM-hsE">
+                                <rect key="frame" x="212" y="193" width="94" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85c-9r-pYi">
+                                <rect key="frame" x="140" y="348" width="134" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Calculate!"/>
+                                <connections>
+                                    <action selector="calculate:" destination="JsY-Bj-a6Z" eventType="touchUpInside" id="TYb-U2-bd8"/>
+                                    <action selector="calculate:" destination="9Jc-nn-23F" eventType="touchUpInside" id="byb-P9-gVx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your results shown here..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEB-pz-RyA">
+                                <rect key="frame" x="39" y="512" width="336" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="wdS-VE-yr6"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kPP-yz-ezg"/>
+                    <connections>
+                        <outlet property="out" destination="zEB-pz-RyA" id="FmJ-i4-OPD"/>
+                        <outlet property="r" destination="6p2-zZ-fyx" id="Cmc-8P-wQj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qSJ-Oe-V7U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1489.8550724637682" y="10.714285714285714"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="areaOfCircle" width="506" height="473"/>
         <image name="areaOfRectangle" width="630" height="380"/>
     </resources>
 </document>
