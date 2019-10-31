@@ -30,10 +30,25 @@ class ParallelogramViewController: UIViewController {
         
     @IBAction func calculate(_ sender: Any) {
         
-        let givenBase = base.text!
-        let givenHeight = height.text!
-        let numericBase = Double(givenBase)!
-        let numericHeight = Double(givenHeight)!
+        guard let givenBase = base.text, givenBase != "" else {
+            out.text = "Required value not found!"
+            return
+        }
+        
+        guard let givenHeight = height.text, givenHeight != "" else {
+            out.text = "Required value not found!"
+            return
+        }
+        
+        guard let numericBase = Double(givenBase) else {
+            out.text = "Please enter a number!"
+            return
+        }
+        
+        guard let numericHeight = Double(givenHeight) else {
+            out.text = "Please enter a number!"
+            return
+        }
         
         out.text = "Area of Parallelogram: \(areaOfParallelogram(base: numericBase, height: numericHeight))"
         
