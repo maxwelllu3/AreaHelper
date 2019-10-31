@@ -11,6 +11,8 @@
 		30A477B7236A701500659C5D /* CircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A477B6236A701500659C5D /* CircleViewController.swift */; };
 		30A477B9236B67B400659C5D /* TriangleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A477B8236B67B400659C5D /* TriangleViewController.swift */; };
 		30A477BB236B6B9800659C5D /* ParallelogramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A477BA236B6B9800659C5D /* ParallelogramViewController.swift */; };
+		30A477BD236B997E00659C5D /* TrapezoidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A477BC236B997E00659C5D /* TrapezoidViewController.swift */; };
+		30A477BF236B9F6500659C5D /* KiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A477BE236B9F6500659C5D /* KiteViewController.swift */; };
 		30F5148D2357EF8200E4845A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F5148C2357EF8200E4845A /* AppDelegate.swift */; };
 		30F5148F2357EF8200E4845A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F5148E2357EF8200E4845A /* ViewController.swift */; };
 		30F514922357EF8200E4845A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30F514902357EF8200E4845A /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 		30A477B6236A701500659C5D /* CircleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewController.swift; sourceTree = "<group>"; };
 		30A477B8236B67B400659C5D /* TriangleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleViewController.swift; sourceTree = "<group>"; };
 		30A477BA236B6B9800659C5D /* ParallelogramViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallelogramViewController.swift; sourceTree = "<group>"; };
+		30A477BC236B997E00659C5D /* TrapezoidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrapezoidViewController.swift; sourceTree = "<group>"; };
+		30A477BE236B9F6500659C5D /* KiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KiteViewController.swift; sourceTree = "<group>"; };
 		30F514892357EF8200E4845A /* AreaHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AreaHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30F5148C2357EF8200E4845A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30F5148E2357EF8200E4845A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +69,8 @@
 				30F5148C2357EF8200E4845A /* AppDelegate.swift */,
 				30F5148E2357EF8200E4845A /* ViewController.swift */,
 				30F514902357EF8200E4845A /* Main.storyboard */,
+				30A477BE236B9F6500659C5D /* KiteViewController.swift */,
+				30A477BC236B997E00659C5D /* TrapezoidViewController.swift */,
 				30A477BA236B6B9800659C5D /* ParallelogramViewController.swift */,
 				30A477B8236B67B400659C5D /* TriangleViewController.swift */,
 				30F514932357EF8900E4845A /* Assets.xcassets */,
@@ -148,11 +154,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				30F5148F2357EF8200E4845A /* ViewController.swift in Sources */,
+				30A477BD236B997E00659C5D /* TrapezoidViewController.swift in Sources */,
 				30445302236282CF00520193 /* RectangleViewController.swift in Sources */,
 				30A477BB236B6B9800659C5D /* ParallelogramViewController.swift in Sources */,
 				30A477B7236A701500659C5D /* CircleViewController.swift in Sources */,
 				30A477B9236B67B400659C5D /* TriangleViewController.swift in Sources */,
 				30F5148D2357EF8200E4845A /* AppDelegate.swift in Sources */,
+				30A477BF236B9F6500659C5D /* KiteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

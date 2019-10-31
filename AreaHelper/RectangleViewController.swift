@@ -29,10 +29,26 @@ class RectangleViewController: UIViewController {
     
     @IBAction func calculate(_ sender: Any) {
         
-        let givenLength = l.text!
-        let givenWidth = w.text!
-        let numericLength = Double(givenLength)!
-        let numericWidth = Double(givenWidth)!
+        
+        guard let givenLength = l.text, givenLength != "" else {
+            out.text = "Required value not found!"
+            return
+        }
+        
+        guard let givenWidth = w.text, givenWidth != "" else {
+            out.text = "Required value not found!"
+            return
+        }
+        
+        guard let numericLength = Double(givenLength) else {
+            out.text = "Please input in numeric form!"
+            return
+        }
+        
+        guard let numericWidth = Double(givenWidth) else {
+            out.text = "Please input in numeric form!"
+            return
+        }
         
         out.text = "Area of Rectangle: \(areaOfRectangle(length: numericLength, width: numericWidth))"
     }
