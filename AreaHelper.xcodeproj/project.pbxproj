@@ -69,15 +69,15 @@
 				30F5148C2357EF8200E4845A /* AppDelegate.swift */,
 				30F5148E2357EF8200E4845A /* ViewController.swift */,
 				30F514902357EF8200E4845A /* Main.storyboard */,
-				30A477BE236B9F6500659C5D /* KiteViewController.swift */,
-				30A477BC236B997E00659C5D /* TrapezoidViewController.swift */,
-				30A477BA236B6B9800659C5D /* ParallelogramViewController.swift */,
+				30445301236282CF00520193 /* RectangleViewController.swift */,
+				30A477B6236A701500659C5D /* CircleViewController.swift */,
 				30A477B8236B67B400659C5D /* TriangleViewController.swift */,
+				30A477BA236B6B9800659C5D /* ParallelogramViewController.swift */,
+				30A477BC236B997E00659C5D /* TrapezoidViewController.swift */,
+				30A477BE236B9F6500659C5D /* KiteViewController.swift */,
 				30F514932357EF8900E4845A /* Assets.xcassets */,
 				30F514952357EF8900E4845A /* LaunchScreen.storyboard */,
 				30F514982357EF8900E4845A /* Info.plist */,
-				30445301236282CF00520193 /* RectangleViewController.swift */,
-				30A477B6236A701500659C5D /* CircleViewController.swift */,
 			);
 			path = AreaHelper;
 			sourceTree = "<group>";

@@ -29,8 +29,15 @@ class CircleViewController: UIViewController {
     
     @IBAction func calculate(_ sender: Any) {
         
-        let givenRadius = r.text!
-        let numericRadius = Double(givenRadius)!
+        guard let givenRadius = r.text, givenRadius != "" else {
+            out.text = "Required value not found!"
+            return
+        }
+        
+        guard let numericRadius = Double(givenRadius) else {
+            out.text = "Please input a number!"
+            return
+        }
         
         out.text = "Area of Circle: \(areaOfCircle(radius: numericRadius))"
     }
