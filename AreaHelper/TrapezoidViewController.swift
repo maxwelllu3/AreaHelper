@@ -38,7 +38,7 @@ class TrapezoidViewController: UIViewController {
             return
         }
         
-        guard let givenBase2 = base1.text, givenBase2 != "" else {
+        guard let givenBase2 = base2.text, givenBase2 != "" else {
             out.text = "Required value not found!"
             return
         }

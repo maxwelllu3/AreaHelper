@@ -32,10 +32,25 @@ class KiteViewController: UIViewController {
         
     @IBAction func calculate(_ sender: Any) {
         
-        let givenDiagonal1 = diagonal1.text!
-        let givenDiagonal2 = diagonal2.text!
-        let numericDiagonal1 = Double(givenDiagonal1)!
-        let numericDiagonal2 = Double(givenDiagonal2)!
+        guard let givenDiagonal1 = diagonal1.text, givenDiagonal1 != "" else {
+                out.text = "Required value not found!"
+                return
+        }
+        
+        guard let givenDiagonal2 = diagonal2.text, givenDiagonal2 != "" else {
+                out.text = "Required value not found!"
+                return
+        }
+        
+        guard let numericDiagonal1 = Double(givenDiagonal1) else {
+            out.text = "Please enter a number!"
+            return
+        }
+        
+        guard let numericDiagonal2 = Double(givenDiagonal2) else {
+            out.text = "Please enter a number!"
+            return
+        }
         
         out.text = "Area of Kite: \(areaOfKite(diagonal1: numericDiagonal1, diagonal2: numericDiagonal2))"
         
