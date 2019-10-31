@@ -41,12 +41,12 @@ class RectangleViewController: UIViewController {
         }
         
         guard let numericLength = Double(givenLength) else {
-            out.text = "Please input a number!"
+            out.text = "Please enter a number!"
             return
         }
         
         guard let numericWidth = Double(givenWidth) else {
-            out.text = "Please input a number!"
+            out.text = "Please enter a number!"
             return
         }
         

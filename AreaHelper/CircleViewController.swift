@@ -35,7 +35,7 @@ class CircleViewController: UIViewController {
         }
         
         guard let numericRadius = Double(givenRadius) else {
-            out.text = "Please input a number!"
+            out.text = "Please enter a number!"
             return
         }
         
