@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CircleViewController.swift
 //  AreaHelper
 //
 //  Created by Maxwell Lu on 2019-10-16.
@@ -10,23 +10,21 @@ import UIKit
 
 class CircleViewController: UIViewController {
     
+    // Set all the outlets
     @IBOutlet weak var out: UILabel!
-    
     @IBOutlet weak var r: UITextField!
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
+    // Create the function to calculate the area.
     func areaOfCircle(radius: Double) -> Double {
         return Double.pi * pow(radius, 2)
     }
         
-    
-    
+    // Outlet and function to calculate the area.
     @IBAction func calculate(_ sender: Any) {
         
         guard let givenRadius = r.text, givenRadius != "" else {
@@ -42,13 +40,4 @@ class CircleViewController: UIViewController {
         out.text = "Area of Circle: \(areaOfCircle(radius: numericRadius))"
     }
 
-    
-    
-    
-        
-        
 }
-    
-
-
-

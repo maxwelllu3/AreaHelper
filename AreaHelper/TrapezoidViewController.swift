@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TrapezoidViewController.swift
 //  AreaHelper
 //
 //  Created by Maxwell Lu on 2019-10-16.
@@ -10,27 +10,24 @@ import UIKit
 
 class TrapezoidViewController: UIViewController {
     
-
+    // Set all the outlets
     @IBOutlet weak var out: UILabel!
     @IBOutlet weak var base1: UITextField!
     @IBOutlet weak var base2: UITextField!
     @IBOutlet weak var height: UITextField!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
+    // Create the function to calculate the area.
     func areaOfTrapezoid(base1: Double, base2: Double, height: Double) -> Double {
-        
         let baseSum = base1 + base2
-        
         return baseSum * height / 2
     }
-    
         
-        
+    // Outlet and function to calculate the area.
     @IBAction func calculate(_ sender: Any) {
         
         guard let givenBase1 = base1.text, givenBase1 != "" else {
@@ -67,20 +64,4 @@ class TrapezoidViewController: UIViewController {
         
     }
     
-        
-
-    
-        
-        
-    
-    
-    
-    
-    
-        
-        
 }
-    
-
-
-

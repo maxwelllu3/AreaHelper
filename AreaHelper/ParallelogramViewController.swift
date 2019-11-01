@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ParallelogramViewController.swift
 //  AreaHelper
 //
 //  Created by Maxwell Lu on 2019-10-16.
@@ -10,24 +10,22 @@ import UIKit
 
 class ParallelogramViewController: UIViewController {
     
+    // Set all the outlets
     @IBOutlet weak var out: UILabel!
     @IBOutlet weak var base: UITextField!
     @IBOutlet weak var height: UITextField!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
+    // Create the function to calculate the area.
     func areaOfParallelogram(base: Double, height: Double) -> Double {
-        
         return base * height
-        
     }
-    
-  
-        
+
+    // Outlet and function to calculate the area.
     @IBAction func calculate(_ sender: Any) {
         
         guard let givenBase = base.text, givenBase != "" else {
@@ -53,18 +51,5 @@ class ParallelogramViewController: UIViewController {
         out.text = "Area of Parallelogram: \(areaOfParallelogram(base: numericBase, height: numericHeight))"
         
     }
-    
-        
-        
-    
-    
-    
-    
-    
-        
-        
+
 }
-    
-
-
-
